@@ -1,6 +1,6 @@
 .App {
-max-width: 100vw;
-max-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   text-align: center;
 }
 /* Chat styles */
@@ -18,10 +18,21 @@ max-height: 100vh;
   background-size: contain;
   background-image: url(./assets/bot-icon.jpg);
 }
-
 .App .react-chatbot-kit-chat-bot-avatar-letter {
-  visibility: hidden;
+	visibility: hidden;
 }
+
+.App .react-chatbot-kit-user-avatar-container {
+	width: 50px;
+	height: 50px;
+	background-position: center;
+	background-size: contain;
+	background-image: url(./assets/user-icon.jpg);
+}
+.App .react-chatbot-kit-user-avatar-icon {
+	visibility: hidden;
+}
+
 .App .react-chatbot-kit-chat-container {
   width: 100vw;
   height: 100vh;
@@ -39,16 +50,17 @@ max-height: 100vh;
 .App .react-chatbot-kit-chat-input {
   border-bottom-left-radius: inherit;
   outline: none;
-  position: fixed;
-    bottom: 0;
+	position: fixed;
+	padding: 13px;
+  bottom: 0;
 }
 .App .react-chatbot-kit-chat-btn-send {
   border-radius: inherit;
   position: fixed;
   background-color: #e6375a;
-    bottom: 0;
-    right: 0;
-    padding: 12px;
+  bottom: 0;
+  right: 0;
+  padding: 12px;
 }
 
 .options {

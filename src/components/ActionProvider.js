@@ -60,6 +60,97 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
       messages: [...prev.messages, botMessage],
     }));
   };
+  const handleJava = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Java",
+      {
+        widget: "java",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleSwift = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Swift",
+      {
+        widget: "swift",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleKotlin = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Kotlin",
+      {
+        widget: "kotlin",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleCSharp = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre C#",
+      {
+        widget: "csharp",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handlePHP = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre PHP",
+      {
+        widget: "php",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleTypescript = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre TypeScript",
+      {
+        widget: "typescript",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleHtmlCss = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre HTML y CSS",
+      {
+        widget: "html/css",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
 
   return (
     <div>
@@ -71,6 +162,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
             handlePython,
             handleJavascript,
             handleSQL,
+            handleJava,
+            handleSwift,
+            handleKotlin,
+            handleCSharp,
+            handlePHP,
+            handleTypescript,
+            handleHtmlCss,
           },
         });
       })}
