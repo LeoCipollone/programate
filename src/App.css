@@ -1,38 +1,106 @@
 .App {
+max-width: 100vw;
+max-height: 100vh;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Chat styles */
+.App .react-chatbot-kit-chat-header {
+  display: block;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #e6375a;
+  border-radius: 0;
+}
+.App .react-chatbot-kit-chat-bot-avatar-container {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+  background-image: url(./assets/bot-icon.jpg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .react-chatbot-kit-chat-bot-avatar-letter {
+  visibility: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .react-chatbot-kit-chat-container {
+  width: 100vw;
+  height: 100vh;
+}
+.App .react-chatbot-kit-chat-message-container {
+  height: 87vh;
+  background-color: #1f91e7;
+}
+.App .react-chatbot-kit-chat-bot-message-container {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: min-content;
+}
+.App .react-chatbot-kit-chat-input {
+  border-bottom-left-radius: inherit;
+  outline: none;
+  position: fixed;
+    bottom: 0;
+}
+.App .react-chatbot-kit-chat-btn-send {
+  border-radius: inherit;
+  position: fixed;
+  background-color: #e6375a;
+    bottom: 0;
+    right: 0;
+    padding: 12px;
+}
+
+.options {
+  padding-bottom: 15px;
+}
+
+.options-header {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.option-item {
+  padding: 8px 15px;
+  background-color: #2273c4;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 3px;
+  box-shadow: inset 0px 0px 0px #e6375a;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.option-item:hover {
+  box-shadow: inset 195px 0px 0px #e6375a;
+  color: #ffffff;
+}
+
+.url-link {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #2273c4;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.url-header {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+@media (max-width: 600px) {
+  .App .react-chatbot-kit-chat-message-container {
+    height: 95vh;
   }
 }
