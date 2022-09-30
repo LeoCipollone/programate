@@ -65,6 +65,11 @@ const Options = (props) => {
       handler: props.actionProvider.handleFrameworks,
       id: 12
     },
+    {
+      name: "Herramientas",
+      handler: props.actionProvider.handleTools,
+      id: 13
+    },
     
   ];
   
