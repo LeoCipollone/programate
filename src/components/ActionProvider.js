@@ -271,6 +271,97 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   };
+  const handleExpress= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Express",
+      {
+        widget: "express",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleLaravel= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Laravel",
+      {
+        widget: "laravel",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleSpring= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Spring",
+      {
+        widget: "spring",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleSymfony= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Symfony",
+      {
+        widget: "symfony",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleTools= () => {
+    const botMessage = createChatBotMessage(
+      "Herramientas",
+      {
+        widget: "tools",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleGit= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Git",
+      {
+        widget: "git",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleDocker= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Docker",
+      {
+        widget: "docker",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
 
   return (
     <div>
@@ -298,6 +389,13 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             handleSvelte,
             handleBackendFrameworks,
             handleDjango,
+            handleExpress,
+            handleLaravel,
+            handleSpring,
+            handleSymfony,
+            handleTools,
+            handleGit,
+            handleDocker,
           },
         });
       })}

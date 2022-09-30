@@ -1,29 +1,14 @@
-const BackendFrameworks = (props) => {
+const Tools = (props) => {
     const options = [
       {
-        name: "Django",
-        handler: props.actionProvider.handleDjango,
+        name: "Git",
+        handler: props.actionProvider.handleGit,
         id: 0
       },
       {
-        name: "Express",
-        handler: props.actionProvider.handleExpress,
+        name: "Docker",
+        handler: props.actionProvider.handleDocker,
         id: 1
-      },
-      {
-        name: "Laravel",
-        handler: props.actionProvider.handleLaravel,
-        id: 2
-      },
-      {
-        name: "Spring",
-        handler: props.actionProvider.handleSpring,
-        id: 3
-      },
-      {
-        name: "Symfony",
-        handler: props.actionProvider.handleSymfony,
-        id: 4
       },
     ];
     
@@ -48,4 +33,4 @@ const BackendFrameworks = (props) => {
     
   };
   
-  export default BackendFrameworks;
+  export default Tools;

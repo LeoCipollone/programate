@@ -19,6 +19,13 @@ import Vue from "./widgets/frameworks/frontend/Vue";
 import Svelte from "./widgets/frameworks/frontend/Svelte";
 import BackendFrameworks from "./widgets/BackendFrameworks";
 import Django from "./widgets/frameworks/backend/Django";
+import Tools from "./widgets/Tools";
+import Git from "./widgets/Tools/Git";
+import Docker from "./widgets/Tools/Docker";
+import Express from "./widgets/frameworks/backend/Express";
+import Laravel from "./widgets/frameworks/backend/Laravel";
+import Spring from "./widgets/frameworks/backend/Spring";
+import Symfony from "./widgets/frameworks/backend/Symfony";
 
 const botName = 'PrograMate';
 
@@ -139,6 +146,41 @@ const config = {
     {
       widgetName: "django",
       widgetFunc: (props) => <Django {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "express",
+      widgetFunc: (props) => <Express {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "laravel",
+      widgetFunc: (props) => <Laravel {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "spring",
+      widgetFunc: (props) => <Spring {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "symfony",
+      widgetFunc: (props) => <Symfony {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "tools",
+      widgetFunc: (props) => <Tools {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "git",
+      widgetFunc: (props) => <Git {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "docker",
+      widgetFunc: (props) => <Docker {...props} />,
       mapStateToProps: ["messages"]
     },
   ],
