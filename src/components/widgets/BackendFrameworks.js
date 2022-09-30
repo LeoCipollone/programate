@@ -1,24 +1,9 @@
-const FrontendFrameworks = (props) => {
+const BackendFrameworks = (props) => {
     const options = [
       {
-        name: "React.js",
-        handler: props.actionProvider.handleReact,
+        name: "Django",
+        handler: props.actionProvider.handleDjango,
         id: 0
-      },
-      {
-        name: "Angular",
-        handler: props.actionProvider.handleAngular,
-        id: 1
-      },
-      {
-        name: "Vue.js",
-        handler: props.actionProvider.handleVue,
-        id: 2
-      },
-      {
-        name: "Svelte",
-        handler: props.actionProvider.handleSvelte,
-        id: 3
       },
     ];
     
@@ -43,4 +28,4 @@ const FrontendFrameworks = (props) => {
     
   };
   
-  export default FrontendFrameworks;
+  export default BackendFrameworks;

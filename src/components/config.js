@@ -14,6 +14,11 @@ import Swift from "./widgets/languages/Swift";
 import Typescript from "./widgets/languages/Typescript";
 import FrontendFrameworks from "./widgets/FrontendFrameworks";
 import React from "./widgets/frameworks/frontend/React";
+import Angular from "./widgets/frameworks/frontend/Angular";
+import Vue from "./widgets/frameworks/frontend/Vue";
+import Svelte from "./widgets/frameworks/frontend/Svelte";
+import BackendFrameworks from "./widgets/BackendFrameworks";
+import Django from "./widgets/frameworks/backend/Django";
 
 const botName = 'PrograMate';
 
@@ -109,6 +114,31 @@ const config = {
     {
       widgetName: "react",
       widgetFunc: (props) => <React {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "angular",
+      widgetFunc: (props) => <Angular {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "vue",
+      widgetFunc: (props) => <Vue {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "svelte",
+      widgetFunc: (props) => <Svelte {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "backend-frameworks",
+      widgetFunc: (props) => <BackendFrameworks {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "django",
+      widgetFunc: (props) => <Django {...props} />,
       mapStateToProps: ["messages"]
     },
   ],

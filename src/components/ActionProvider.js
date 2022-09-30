@@ -195,9 +195,74 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const handleReact = () => {
     const botMessage = createChatBotMessage(
-      "Aqui puedes aprender más sobre React",
+      "Aqui puedes aprender más sobre React JS",
       {
         widget: "react",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleVue = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Vue JS",
+      {
+        widget: "vue",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleAngular = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Angular",
+      {
+        widget: "angular",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleSvelte = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Svelte",
+      {
+        widget: "svelte",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleBackendFrameworks = () => {
+    const botMessage = createChatBotMessage(
+      "Back End Frameworks",
+      {
+        widget: "backend-frameworks",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleDjango= () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre Django",
+      {
+        widget: "django",
         withAvatar: true
       }
     );
@@ -228,6 +293,11 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             handleFrameworks,
             handleFrontendFrameworks,
             handleReact,
+            handleAngular,
+            handleVue,
+            handleSvelte,
+            handleBackendFrameworks,
+            handleDjango,
           },
         });
       })}
