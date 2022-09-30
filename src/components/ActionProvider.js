@@ -156,7 +156,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     const botMessage = createChatBotMessage(
       "Aqui puedes aprender más sobre HTML y CSS",
       {
-        widget: "html/css",
+        widget: "html-css",
         withAvatar: true
       }
     );

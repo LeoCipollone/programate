@@ -1,7 +1,7 @@
 const FrontendFrameworks = (props) => {
     const options = [
       {
-        name: "React.js",
+        name: "ReactJS",
         handler: props.actionProvider.handleReact,
         id: 0
       },
@@ -11,7 +11,7 @@ const FrontendFrameworks = (props) => {
         id: 1
       },
       {
-        name: "Vue.js",
+        name: "VueJS",
         handler: props.actionProvider.handleVue,
         id: 2
       },

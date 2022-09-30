@@ -11,7 +11,7 @@ const Options = (props) => {
       id: 1
     },
     {
-      name: "HTML/CSS",
+      name: "HTML y CSS",
       handler: props.actionProvider.handleHtmlCss,
       id: 2
     },

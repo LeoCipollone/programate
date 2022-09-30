@@ -19,13 +19,13 @@ import Vue from "./widgets/frameworks/frontend/Vue";
 import Svelte from "./widgets/frameworks/frontend/Svelte";
 import BackendFrameworks from "./widgets/BackendFrameworks";
 import Django from "./widgets/frameworks/backend/Django";
-import Tools from "./widgets/Tools";
-import Git from "./widgets/Tools/Git";
-import Docker from "./widgets/Tools/Docker";
 import Express from "./widgets/frameworks/backend/Express";
 import Laravel from "./widgets/frameworks/backend/Laravel";
 import Spring from "./widgets/frameworks/backend/Spring";
 import Symfony from "./widgets/frameworks/backend/Symfony";
+import Tools from "./widgets/Tools";
+import Git from "./widgets/Tools/Git";
+import Docker from "./widgets/Tools/Docker";
 
 const botName = 'PrograMate';
 
@@ -109,7 +109,7 @@ const config = {
       mapStateToProps: ["messages"]
     },
     {
-      widgetName: "html/css",
+      widgetName: "html-css",
       widgetFunc: (props) => <HtmlCss {...props} />,
       mapStateToProps: ["messages"]
     },
