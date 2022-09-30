@@ -9,7 +9,7 @@ const Link = ({ url, title }) => {
       className="url-link"
     >
       <svg
-        width="30px"
+        width="20px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 26 24"
         fill="none"

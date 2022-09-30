@@ -1,6 +1,6 @@
 import React from "react";
 
-const ActionProvider = ({ createChatBotMessage, setState, children, state }) => {
+const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleHello = () => {
     const botMessage = createChatBotMessage("Hola. ¿Cómo puedo ayudarte?");
     
@@ -13,6 +13,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
   const handleLanguage = () => {
     const botMessage = createChatBotMessage("¿Qué te gustaría crear?");
 
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleRoadmaps = () => {
+    const botMessage = createChatBotMessage(
+      "Roadmaps",
+      {
+        widget: "roadmaps",
+        withAvatar: true
+      }
+    );
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
@@ -151,6 +165,47 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
       messages: [...prev.messages, botMessage],
     }));
   };
+  const handleFrameworks = () => {
+    const botMessage = createChatBotMessage(
+      "Frameworks",
+      {
+        widget: "frameworks",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleFrontendFrameworks = () => {
+    const botMessage = createChatBotMessage(
+      "Front End Frameworks",
+      {
+        widget: "frontend-frameworks",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleReact = () => {
+    const botMessage = createChatBotMessage(
+      "Aqui puedes aprender más sobre React",
+      {
+        widget: "react",
+        withAvatar: true
+      }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
 
   return (
     <div>
@@ -159,6 +214,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
           actions: {
             handleHello,
             handleLanguage,
+            handleRoadmaps,
             handlePython,
             handleJavascript,
             handleSQL,
@@ -169,6 +225,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children, state }) => 
             handlePHP,
             handleTypescript,
             handleHtmlCss,
+            handleFrameworks,
+            handleFrontendFrameworks,
+            handleReact,
           },
         });
       })}

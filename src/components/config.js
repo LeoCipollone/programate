@@ -1,15 +1,19 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import Options from "../components/widgets/Options";
 import CSharp from "./widgets/languages/CSharp";
+import Frameworks from "./widgets/Frameworks";
 import HtmlCss from "./widgets/languages/HtmlCss";
 import Java from "./widgets/languages/Java";
 import Javascript from "./widgets/languages/Javascript";
 import Kotlin from "./widgets/languages/Kotlin";
 import PHP from "./widgets/languages/PHP";
 import Python from "./widgets/languages/Python";
+import Roadmaps from "./widgets/languages/Roadmaps";
 import SQL from "./widgets/languages/SQL";
 import Swift from "./widgets/languages/Swift";
 import Typescript from "./widgets/languages/Typescript";
+import FrontendFrameworks from "./widgets/FrontendFrameworks";
+import React from "./widgets/frameworks/frontend/React";
 
 const botName = 'PrograMate';
 
@@ -17,7 +21,7 @@ const config = {
   botName: botName,
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#e6375a',
+      backgroundColor: '#e052a0',
     },
   },
   initialMessages: [
@@ -35,6 +39,16 @@ const config = {
     {
       widgetName: "options",
       widgetFunc: (props) => <Options {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "roadmaps",
+      widgetFunc: (props) => <Roadmaps {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "frameworks",
+      widgetFunc: (props) => <Frameworks {...props} />,
       mapStateToProps: ["messages"]
     },
     {
@@ -85,6 +99,16 @@ const config = {
     {
       widgetName: "html/css",
       widgetFunc: (props) => <HtmlCss {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "frontend-frameworks",
+      widgetFunc: (props) => <FrontendFrameworks {...props} />,
+      mapStateToProps: ["messages"]
+    },
+    {
+      widgetName: "react",
+      widgetFunc: (props) => <React {...props} />,
       mapStateToProps: ["messages"]
     },
   ],
