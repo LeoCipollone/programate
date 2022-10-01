@@ -13,6 +13,8 @@ const MessageParser = ({ children, actions }) => {
     else if (message.toLowerCase().includes('empiezo') ||
       message.toLowerCase().includes('empezar') ||
       message.toLowerCase().includes('estudi') ||
+      message.toLowerCase().includes('puedes') ||
+      message.toLowerCase().includes('hacer') ||
       message.toLowerCase().includes('aprend')
     ) {
       actions.handleLanguage();
@@ -100,6 +102,38 @@ const MessageParser = ({ children, actions }) => {
       message.toLowerCase().includes('estilo')
     ) {
       actions.handleHtmlCss();
+    }
+
+    else if (message.toLowerCase().includes('docker') ||
+      message.toLowerCase().includes('container') ||
+      message.toLowerCase().includes('contenedor') ||
+      message.toLowerCase().includes('despliegue')
+    ) {
+      actions.handleDocker();
+    }
+
+    else if (message.toLowerCase().includes('git') ||
+      message.toLowerCase().includes('version') ||
+      message.toLowerCase().includes('control')
+    ) {
+      actions.handleGit();
+    }
+
+    else if (message.toLowerCase().includes('framework')
+    ) {
+      actions.handleFrameworks();
+    }
+
+    else if (message.toLowerCase().includes('frontend') ||
+      message.toLowerCase().includes('front')
+    ) {
+      actions.handleFrontendFrameworks();
+    }
+
+    else if (message.toLowerCase().includes('backend') ||
+      message.toLowerCase().includes('back')
+    ) {
+      actions.handleBackendFrameworks();
     }
   };
 
