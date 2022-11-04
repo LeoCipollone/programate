@@ -54,8 +54,8 @@ describe('Check font-family', () => {
   it('check if font-family is not modified', () => {
     cy.visit(URL)
     
-    cy.get('body') // yields <nav> // yields <nav>
-    .should('have.css', 'font-family') // yields 'sans-serif'
-    .and('match', /Roboto/) // yields 'sans-serif'
+    cy.get('body') // yields <body>
+    .should('have.css', 'font-family')
+    .and('match', /Roboto/)
   })
 });
